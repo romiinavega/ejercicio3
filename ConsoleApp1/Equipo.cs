@@ -11,18 +11,24 @@ namespace ConsoleApp1
             public string Nombre { get; set; }
             public string Origen { get; set; }
             public string Entrenador { get; set; }
-            public string Jugadores { get; set; }
+            public List <Jugador>Jugadores { get; set; }
+
 
             public Equipo()
             {
-                Nombre = "Pendiente";
+                Nombre = "Equipo nuevo";
                 Origen = "Sin asignar";
+            Entrenador = "Sin entrenador";
+            Jugadores = new List<Jugador>();
+
 
             }
-            public Equipo(string nombre, string matricula)
+            public Equipo(string nombre)
             {
                 Nombre = nombre;
-                Origen = matricula;
+                Origen = "Sin asignar";
+            Entrenador = "Sin entrenador";
+            Jugadores = new List<Jugador>();
             }
         }
     }
